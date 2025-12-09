@@ -1,0 +1,32 @@
+/* 自定义动画 */
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 10s linear infinite;
+}
+
+/* 隐藏滚动条但保留功能 */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* 播放动画条 */
+.playing-bar {
+    animation: sound-wave 0.8s ease-in-out infinite alternate;
+}
+@keyframes sound-wave {
+    0% { height: 20%; }
+    100% { height: 100%; }
+}
